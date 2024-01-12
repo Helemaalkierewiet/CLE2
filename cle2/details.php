@@ -1,10 +1,11 @@
 <?php
-
 /**@var array $appointments
  * @var mysqli $db
  */
 
 require_once 'includes/database.php';
+
+$date = (isset($_GET['date']) && is_numeric($_GET['date'])) ? htmlspecialchars($_GET['date'] - 1) : null;
 
 $query ="SELECT *
 FROM appointments
@@ -25,9 +26,6 @@ while ($row = mysqli_fetch_assoc($appointmentTable)) {
 }
 
 mysqli_close($db);
-
-$index = (isset($_GET['id']) && is_numeric($_GET['id'])) ? htmlspecialchars($_GET['id'] - 1) : null;
-
 ?>
 
 <!doctype html>
@@ -37,24 +35,29 @@ $index = (isset($_GET['id']) && is_numeric($_GET['id'])) ? htmlspecialchars($_GE
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Details <?= htmlspecialchars($appointments[$index]['title']) ?> | afspraak</title>
+    <title>Afspraken op  <?= htmlspecialchars($appointments[$date]['name  ']) ?></title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h2><?= isset($appointments[$index]['title']) ? htmlspecialchars($appointments[$index]['title']) : 'Appointment Not Found' ?> details</h2>
-        <section>
-            <ul>
-                <li>Voornaam: <?= isset($appointments[$index]['first_name']) ? htmlspecialchars($appointments[$index]['first_name']) : '' ?></li>
-                <li>Achternaam: <?= isset($appointments[$index]['last_name']) ? htmlspecialchars($appointments[$index]['last_name']) : '' ?></li>
-                <li>Datum: <?= isset($appointments[$index]['name']) ? htmlspecialchars($appointments[$index]['name']) : '' ?></li>
-                <li>Tijdslot: <?= isset($appointments[$index]['timeslot_id']) ? htmlspecialchars($appointments[$index]['timeslot_id']) : '' ?></li>
-                <li>Start tijd: <?= isset($appointments[$index]['start_time']) ? htmlspecialchars($appointments[$index]['start_time']) : '' ?></li>
-                <li>Eind tijd: <?= isset($appointments[$index]['end_time']) ? htmlspecialchars($appointments[$index]['end_time']) : '' ?></li>
-                <li>Beschrijving: <?= isset($appointments[$index]['description']) ? htmlspecialchars($appointments[$index]['description']) : '' ?></li>
-            </ul>
-        </section>
-
-    </div>
+<div class="container">
+    <h2>Afspraken op <?= htmlspecialchars($appointments[$date]['name']) ?></h2>
+    <?php if (empty($appointments)): ?>
+        <p>Geen afspraken op deze datum</p>
+    <?php else: ?>
+        <?php foreach ($appointments as $appointment): ?>
+            <section>
+                <h3><?= isset($appointment['title']) ? htmlspecialchars($appointment['title']) : 'Appointment Not Found' ?> details</h3>
+                <ul>
+                    <li>Voornaam: <?= isset($appointment['first_name']) ? htmlspecialchars($appointment['first_name']) : '' ?></li>
+                    <li>Achternaam: <?= isset($appointment['last_name']) ? htmlspecialchars($appointment['last_name']) : '' ?></li>
+                    <li>Tijdslot: <?= isset($appointment['timeslot_id']) ? htmlspecialchars($appointment['timeslot_id']) : '' ?></li>
+                    <li>Start tijd: <?= isset($appointment['start_time']) ? htmlspecialchars($appointment['start_time']) : '' ?></li>
+                    <li>Eind tijd: <?= isset($appointment['end_time']) ? htmlspecialchars($appointment['end_time']) : '' ?></li>
+                    <li>Beschrijving: <?= isset($appointment['description']) ? htmlspecialchars($appointment['description']) : '' ?></li>
+                </ul>
+            </section>
+        <?php endforeach; ?>
+    <?php endif; ?>
+</div>
 </body>
 </html>
