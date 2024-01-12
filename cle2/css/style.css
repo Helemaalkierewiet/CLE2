@@ -1,0 +1,36 @@
+*{
+    border: blue solid 1px;
+    box-sizing: border-box;
+}
+
+/*desktop*/
+@media only screen and (min-width: 769px) {
+
+    body{
+
+        background-color: rgb(26, 255, 0);
+
+    }
+
+
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    nav a{
+        display: flex;
+        text-decoration: none;
+
+    }
+
+    .logo img{
+        height: 60px;
+        width: 100%;
+    }
+
+}
