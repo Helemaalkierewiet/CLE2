@@ -47,10 +47,7 @@ $index = (isset($_GET['id']) && is_numeric($_GET['id'])) ? htmlspecialchars($_GE
             <ul>
                 <li>Voornaam: <?= isset($appointments[$index]['first_name']) ? htmlspecialchars($appointments[$index]['first_name']) : '' ?></li>
                 <li>Achternaam: <?= isset($appointments[$index]['last_name']) ? htmlspecialchars($appointments[$index]['last_name']) : '' ?></li>
-                <li>Datum: <?= isset($appointments[$index]['date']) ? htmlspecialchars($appointments[$index]['date']) : '' ?></li>
-                <li>Dag: <?= isset($appointments[$index]['name']) ? htmlspecialchars($appointments[$index]['name']) : '' ?></li>
-                <li>Maand: <?= isset($appointments[$index]['month']) ? htmlspecialchars($appointments[$index]['month']) : '' ?></li>
-                <li>Jaar: <?= isset($appointments[$index]['year']) ? htmlspecialchars($appointments[$index]['year']) : '' ?></li>
+                <li>Datum: <?= isset($appointments[$index]['name']) ? htmlspecialchars($appointments[$index]['name']) : '' ?></li>
                 <li>Tijdslot: <?= isset($appointments[$index]['timeslot_id']) ? htmlspecialchars($appointments[$index]['timeslot_id']) : '' ?></li>
                 <li>Start tijd: <?= isset($appointments[$index]['start_time']) ? htmlspecialchars($appointments[$index]['start_time']) : '' ?></li>
                 <li>Eind tijd: <?= isset($appointments[$index]['end_time']) ? htmlspecialchars($appointments[$index]['end_time']) : '' ?></li>
