@@ -1,5 +1,5 @@
 *{
-    border: blue solid 1px;
+    border: #2d2424 solid 1px;
     box-sizing: border-box;
 }
 
@@ -8,7 +8,7 @@
 
     body{
 
-        background-color: rgb(26, 255, 0);
+        background-color: rgb(38, 38, 38);
 
     }
 
