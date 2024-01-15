@@ -7,7 +7,7 @@ require_once 'includes/database.php';
 $query = "SELECT * FROM calender_apps";
 $result = mysqli_query($db, $query);
 
-// Zet de afspraken om in het juiste formaat voor FullCalendar
+// Zet de afspraken om in het juiste formaat voor  het calender scrips xoxox i love oai
 $calender_apps = [];
 while ($row = mysqli_fetch_assoc($result)) {
     $calender_apps[] = [
@@ -32,7 +32,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <div id="calendar"></div>
 
-<!-- Voeg een aangepaste modal toe -->
+<!-- Voeg een Xtra modal toe-->
 <div id="timeSlotModal" title="Kies een tijdslot">
     <p>Kies een tijdslot:</p>
     <form>
@@ -72,7 +72,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             }
         });
 
-        // Voeg een click event toe aan de kalendercel om onze aangepaste modal te tonen
+        // Click calender == onclick functie
         $('#calendar').on('click', '.fc-day', function (e) {
             e.preventDefault();
             showModal(moment($(this).data('date')));

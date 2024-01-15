@@ -6,7 +6,7 @@ require_once 'includes/database.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'];
 
-    // Fetch the start and end time of the appointment before deletion
+    // Check begin en Eind tijd van tijdslot beschikbaarheidd
     $query = "SELECT start, end FROM calender_apps WHERE id = '$id'";
     $result = mysqli_query($db, $query);
 
@@ -14,13 +14,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $start = $row['start'];
         $end = $row['end'];
 
-        // Verwijder de afspraak
+        // Verwijder tijdslot ALS dus
         $deleteQuery = "DELETE FROM calender_apps WHERE id = '$id'";
         $deleteResult = mysqli_query($db, $deleteQuery);
 
         if ($deleteResult) {
             echo "Success";
-            // Return the start and end time for the availability check
+            // LAAT TIJDEN ZIEN VOOR USER
             echo ',' . $start . ',' . $end;
         } else {
             echo "Error";
@@ -30,6 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Log POST data
+// OMFG DIT IS EEN STRUGGLE
 error_log(print_r($_POST, true));
 ?>

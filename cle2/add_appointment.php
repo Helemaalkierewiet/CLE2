@@ -16,10 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Error";
     }
 
-    // Log de query resultaten
+    // debuggr
     error_log(print_r($result, true));
 }
 
-// Log POST data
+// help
 error_log(print_r($_POST, true));
 ?>

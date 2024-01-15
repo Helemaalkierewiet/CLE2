@@ -17,10 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo 'available';
     }
 
-    // Log de query resultaten
+    // sos
     error_log(print_r(mysqli_fetch_all($result, MYSQLI_ASSOC), true));
 }
 
-// Log POST data
+// soss
 error_log(print_r($_POST, true));
 ?>
