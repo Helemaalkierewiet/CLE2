@@ -18,7 +18,7 @@
         <div class="fotos"><a href="">Foto's</a></div>
         <div class="afspraak"><a href="">Afspraak maken</a> </div>
         <div class="contact"><a href="">Contact en locatie</a></div>
-        <div class="inlog"><a href="">Inlog</a></div>
+        <div class="inlog"><a href="login.php">Inlog</a></div>
 
 
 
