@@ -50,16 +50,17 @@ mysqli_close($db);
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container">
-    <header>
+<div class="details-container">
+    <header class="details-header">
         <h2>Afspraken op <?= htmlspecialchars($dayName) ?></h2>
 
         <?php if (empty($appointments)): ?>
             <p>Geen afspraken op deze datum</p>
         <?php else: ?>
     </header>
-    <?php foreach ($appointments as $appointment): ?>
-        <section>
+    <section class="details-content">
+     <?php foreach ($appointments as $appointment): ?>
+        <section class="details-list">
             <h3><?= isset($appointment['title']) ? htmlspecialchars($appointment['title']) : 'Appointment Not Found' ?> details</h3>
             <ul>
                 <li>Voornaam: <?= isset($appointment['first_name']) ? htmlspecialchars($appointment['first_name']) : '' ?></li>
@@ -70,7 +71,9 @@ mysqli_close($db);
                 <li>Beschrijving: <?= isset($appointment['description']) ? htmlspecialchars($appointment['description']) : '' ?></li>
             </ul>
         </section>
+
     <?php endforeach; ?>
+    </section>
     <?php endif; ?>
 </div>
 </body>
