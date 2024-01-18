@@ -79,6 +79,7 @@ body {
     height: 26px;
     text-decoration: none;
     z-index: 1;
+    padding-left: 21px;
 }
 .frame-item,
 .vector-parent {
@@ -144,6 +145,7 @@ body {
     height: 26px;
     text-decoration: none;
     z-index: 1;
+    padding-left: 20px;
 }
 .vector-container {
     border-radius: var(--br-11xl);
@@ -239,6 +241,7 @@ body {
     height: 26px;
     text-decoration: none;
     z-index: 1;
+    padding-left: 21px;
 }
 .frame-button {
     cursor: pointer;
@@ -288,11 +291,11 @@ body {
     height: 100%;
     object-fit: contain;
     position: absolute;
-    left: 0;
     top: 4px;
     width: 100%;
     transform: scale(1.02);
 }
+
 .wrapper-image-1 {
     position: relative;
     height: 410px;

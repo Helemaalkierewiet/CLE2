@@ -142,7 +142,34 @@ flex-grow: 0;
 background-color: #fff;
 
 }
-
+<p class="blank-line4">
+    <a
+            class="blank-line5"
+            href="https://boerderijweidelicht.nl/next-slide"
+            target="_blank"
+    >
+        <span class="blank-line6">&nbsp;</span>
+    </a>
+</p>
+<p class="blank-line7">
+    <a
+            class="blank-line8"
+            href="https://boerderijweidelicht.nl/next-slide"
+            target="_blank"
+    >
+        <span class="blank-line9">&nbsp;</span>
+    </a>
+</p>
+<p class="blank-line10">
+    <a
+            class="blank-line11"
+            href="https://boerderijweidelicht.nl/next-slide"
+            target="_blank"
+    >
+        <span class="blank-line12">&nbsp;</span>
+    </a>
+</p>
+<p class="blank-line13">&nbsp;</p>
 nav{
 display: flex;
 flex-direction: row;
@@ -308,3 +335,33 @@ height: 410px;
 margin: 75px 188px 28px;
 box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
+
+
+<p class="blank-line4">
+    <a
+            class="blank-line5"
+            href="https://boerderijweidelicht.nl/next-slide"
+            target="_blank"
+    >
+        <span class="blank-line6">&nbsp;</span>
+    </a>
+</p>
+<p class="blank-line7">
+    <a
+            class="blank-line8"
+            href="https://boerderijweidelicht.nl/next-slide"
+            target="_blank"
+    >
+        <span class="blank-line9">&nbsp;</span>
+    </a>
+</p>
+<p class="blank-line10">
+    <a
+            class="blank-line11"
+            href="https://boerderijweidelicht.nl/next-slide"
+            target="_blank"
+    >
+        <span class="blank-line12">&nbsp;</span>
+    </a>
+</p>
+<p class="blank-line13">&nbsp;</p>

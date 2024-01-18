@@ -34,7 +34,7 @@
 
                         <a
                                 class="home"
-                                href="https://www.figma.com/proto/OfRFP7CCgVH9oy64zSfQ4F/Untitled?type=design&node-id=21-43&t=5shvpIsrMsa1bECF-0&scaling=min-zoom&page-id=0%3A1"
+                                href="index.php"
                                 target="_blank"
                         >Home</a
                         >
@@ -76,7 +76,7 @@
 
                         <a
                                 class="afspraak-maken"
-                                href="https://www.figma.com/proto/OfRFP7CCgVH9oy64zSfQ4F/Untitled?type=design&node-id=21-43&t=5shvpIsrMsa1bECF-0&scaling=min-zoom&page-id=0%3A1"
+                                href="calender.php"
                                 target="_blank"
                         >Afspraak maken</a
                         >
@@ -90,7 +90,7 @@
 
                         <a
                                 class="contact-locatie"
-                                href="https://www.figma.com/proto/OfRFP7CCgVH9oy64zSfQ4F/Untitled?type=design&node-id=21-43&t=5shvpIsrMsa1bECF-0&scaling=min-zoom&page-id=0%3A1"
+                                href="#divcontact"
                                 target="_blank"
                         >Contact & Locatie</a
                         >
@@ -104,7 +104,7 @@
 
                         <a
                                 class="login"
-                                href="https://www.figma.com/proto/OfRFP7CCgVH9oy64zSfQ4F/Untitled?type=design&node-id=21-43&t=5shvpIsrMsa1bECF-0&scaling=min-zoom&page-id=0%3A1"
+                                href="login.php"
                                 target="_blank"
                         >Login</a
                         >
@@ -179,34 +179,7 @@
                     Mijn oprechte complimenten voor de initiatiefnemer(s?) en de
                     aandachtige medewerkers!”
                   </p>
-                  <p class="blank-line4">
-                    <a
-                            class="blank-line5"
-                            href="https://boerderijweidelicht.nl/next-slide"
-                            target="_blank"
-                    >
-                      <span class="blank-line6">&nbsp;</span>
-                    </a>
-                  </p>
-                  <p class="blank-line7">
-                    <a
-                            class="blank-line8"
-                            href="https://boerderijweidelicht.nl/next-slide"
-                            target="_blank"
-                    >
-                      <span class="blank-line9">&nbsp;</span>
-                    </a>
-                  </p>
-                  <p class="blank-line10">
-                    <a
-                            class="blank-line11"
-                            href="https://boerderijweidelicht.nl/next-slide"
-                            target="_blank"
-                    >
-                      <span class="blank-line12">&nbsp;</span>
-                    </a>
-                  </p>
-                  <p class="blank-line13">&nbsp;</p>
+
                 </span>
                     </div>
                 </div>
@@ -218,7 +191,7 @@
             <div class="rectangle-child"></div>
             <div class="rectangle-inner">
                 <div class="frame-group">
-                    <div class="text-parent">
+                    <div class="text-parent" id="divcontact">
                         <div class="text6">
                             <div class="text-group">
                                 <div class="text7">
