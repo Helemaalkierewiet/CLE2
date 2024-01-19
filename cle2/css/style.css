@@ -1,4 +1,4 @@
-/homepage/
+/algemeen/
 
 body {
     margin: 0 auto;
@@ -24,7 +24,7 @@ body {
     --color-gray: #212529;
 
     /* Gaps */
-    --gap-base: 16px;
+    --gap-base: -36px;
     --gap-13xl: 32px;
     --gap-10xs: 3px;
     --gap-4xl: 23px;
@@ -83,7 +83,8 @@ body {
 
 }
 
-.welkom-op-boerderij {
+
+.welkom-op-boerderij{
     margin: 0 !important;
     position: absolute;
     bottom: -5px;
@@ -872,6 +873,8 @@ body {
     padding: 0 var(--padding-17xl) 0 0;
     letter-spacing: normal;
 }
+
+
 @media screen and (max-width: 975px) {
     .hoe-ziet-een,
     .vector-group {
@@ -893,6 +896,8 @@ body {
         gap: var(--gap-13xl);
     }
 }
+
+
 @media screen and (max-width: 700px) {
     .screenshot-2023-12-11-135019-1-parent {
         gap: var(--gap-4xl);
