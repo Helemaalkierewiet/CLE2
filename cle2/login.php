@@ -67,15 +67,14 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<section>
-
+<div class="register-container">
+        <section class="details-header">
     <div class="container">
     <?php if ($login):?>
 <p> You are logged in!</p>
         <p><a href="logout.php">Log out</a> </p>
     <?php else: ?>
         <h2>Log in</h2>
-        <section>
             <?php if (!empty($errors)): ?>
                 <div class="error">
                     <ul>
@@ -85,8 +84,12 @@ if (isset($_POST['submit'])) {
                     </ul>
                 </div>
             <?php endif; ?>
+
+            </section>
+    <div class="register-form">
   <form action="" method="post">
-    <div>
+      <div class="register-form-all">
+    <div class="register-form-part">
         <label class="label" for="email">Email</label>
         <div class="field">
             <input class="input" id="email" type="text" name="email" value="<?= $email ?? '' ?>" required/>
@@ -95,7 +98,7 @@ if (isset($_POST['submit'])) {
     <p>
         <?= $errors['email'] ?? '' ?>
     </p>
-    <div>
+    <div class="register-form-part">
         <label class="label" for="password">Password</label>
         <div class="field">
             <input class="input" id="password" type="password" name="password" required/>
@@ -108,6 +111,8 @@ if (isset($_POST['submit'])) {
       <div class="field">
           <button type="submit" name="submit">Log in With Email</button>
       </div>
+      </div>
+  </form>
       <a href="register.php">Register</a>
 
       <div class="back-button">
@@ -115,8 +120,11 @@ if (isset($_POST['submit'])) {
       </div>
     </div>
 
+</div>
 
-</section>
+
+
     <?php endif; ?>
+</div>
 </body>
 </html>

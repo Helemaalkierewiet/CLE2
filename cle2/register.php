@@ -48,9 +48,13 @@ if (isset($_POST['submit'])) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h2>Register</h2>
+<div class="register-container">
+    <section class="details-header">
+        <h2>Register</h2>
+    </section>
 <section>
     <?php if (!empty($errors)): ?>
         <div class="error">
@@ -61,39 +65,50 @@ if (isset($_POST['submit'])) {
             </ul>
         </div>
     <?php endif; ?>
+    <section class="register-form">
     <form action="" method="post">
-        <div>
+        <div class="register-form-all">
+        <div class="register-form-part">
             <label class="label" for="firstName">First name</label>
             <div class="field">
                 <input class="input" id="firstName" type="text" name="firstName" value="<?= $firstName ?? '' ?>" />
             </div>
         </div>
-        <div>
+        <div class="register-form-part">
             <label class="label" for="lastName">Last name</label>
             <div class="field">
                 <input class="input" id="lastName" type="text" name="lastName" value="<?= $lastName ?? '' ?>" />
             </div>
         </div>
 
-        <div>
+        <div class="register-form-part">
             <label class="label" for="email">Email</label>
             <div class="field">
                 <input class="input" id="email" type="text" name="email" value="<?= $email ?? '' ?>" />
             </div>
         </div>
 
-        <div>
+        <div class="register-form-part">
             <label class="label" for="password">Password</label>
             <div class="field">
                 <input class="input" id="password" type="password" name="password"/>
             </div>
         </div>
-        <div>
-            <div>
+        <div class="register-form-part">
+            <div class="register-form-button">
                 <button type="submit" name="submit">Register</button>
             </div>
         </div>
+        </div>
     </form>
+        <section>
+        <div>
+            <a href="login.php">Back to login</a>
+            <a href="index.php">Back to home</a>
+        </div>
+        </section>
+    </section>
 </section>
+</div>
 </body>
 </html>

@@ -80,7 +80,56 @@ body {
 
 .details-list h3{
     margin: 0.5vh;
+}
 
+/* Register page */
+.register-container {
+    max-width: 60vw;
+    margin: 0 auto;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5vh;
+}
+
+.register-form a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: #fff;
+    background-color: #4CAF50;
+}
+
+.register-form-all {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.5rem;
+    align-items: center
+}
+
+.register-form-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-form-button input[type=button], input[type=submit], input[type=reset] {
+    width: 45vw;
+    height: 2vh;
+    padding: 16px 32px;
+}
+
+.register-form input {
+    width: 45vw;
+    height: 2vh;
 }
 
 .welkom-op-boerderij {
