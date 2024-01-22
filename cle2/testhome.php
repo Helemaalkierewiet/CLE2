@@ -371,3 +371,6 @@ padding: 0 var(--padding-17xl) 0 0;
 
 roots
 --padding-17xl: 36px;
+
+Speedcourse mail:
+
