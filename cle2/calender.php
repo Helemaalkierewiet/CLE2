@@ -39,7 +39,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         <label><input type="radio" name="timeSlot" value="1"> 09:00 - 11:00</label>
         <label><input type="radio" name="timeSlot" value="2"> 13:30 - 15:30</label>
     </form>
-</div>
+</div>a
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
@@ -69,6 +69,9 @@ while ($row = mysqli_fetch_assoc($result)) {
                         }
                     });
                 }
+            },
+            eventRender: function(event, element) {
+                element.find('.fc-title').html(event.title);
             }
         });
 
@@ -80,17 +83,20 @@ while ($row = mysqli_fetch_assoc($result)) {
     });
 
     function showModal(selectedDate) {
-        $("#timeSlotModal").dialog({
+        var dialog = $("#timeSlotModal");
+
+        dialog.dialog({
             modal: true,
             buttons: {
                 "OK": function () {
                     var selectedTimeSlot = $("input[name='timeSlot']:checked").val();
                     if (selectedTimeSlot) {
-                        var title = 'Tijdslot ' + selectedTimeSlot;
+                        var title = getTimeSlotTitle(selectedTimeSlot);
                         var eventData = {
                             title: title,
                             start: selectedDate.format(),
-                            end: selectedDate.clone().add(2, 'hours').format()
+                            end: selectedDate.clone().add(2, 'hours').format(),
+                            timeSlot: selectedTimeSlot
                         };
 
                         // Controleer of het tijdslot beschikbaar is
@@ -99,7 +105,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                                 if (isAvailable) {
                                     $('#calendar').fullCalendar('renderEvent', eventData, true);
                                     addAppointmentToDatabase(eventData);
-                                    $(this).dialog("close");
+                                    dialog.dialog("close"); // Gebruik hier de eerder vastgelegde 'dialog'
                                 } else {
                                     alert('Dit tijdslot is al geboekt. Kies een ander tijdslot.');
                                 }
@@ -110,10 +116,22 @@ while ($row = mysqli_fetch_assoc($result)) {
                     }
                 },
                 "Annuleren": function () {
-                    $(this).dialog("close");
+                    dialog.dialog("close");
                 }
             }
         });
+    }
+
+
+    function getTimeSlotTitle(selectedTimeSlot) {
+        // Voeg hier de logica toe om de juiste tekst voor elk tijdslot te bepalen
+        if (selectedTimeSlot === '1') {
+            return 'Tijdslot 1 (09:00 - 11:00)';
+        } else if (selectedTimeSlot === '2') {
+            return 'Tijdslot 2 (13:30 - 15:30)';
+        } else {
+            return 'Onbekend tijdslot';
+        }
     }
 
     function isTimeSlotAvailable(startTime, endTime) {
@@ -133,11 +151,17 @@ while ($row = mysqli_fetch_assoc($result)) {
     }
 
     function addAppointmentToDatabase(eventData) {
+        console.log("Sending data to server:", eventData); // Voeg deze regel toe voor debugging
         $.ajax({
             type: 'POST',
             url: 'add_appointment.php',
-            data: { start: eventData.start, end: eventData.end },
+            data: {
+                start: eventData.start,
+                end: eventData.end,
+                timeSlot: eventData.timeSlot
+            },
             success: function (response) {
+                console.log("Server response:", response); // Voeg deze regel toe voor debugging
                 if (response !== 'Error') {
                     eventData.id = response;
                 } else {
