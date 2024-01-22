@@ -104,7 +104,7 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: #318355;
 }
 
 .register-form-all {
@@ -128,7 +128,7 @@ body {
 }
 
 .register-form input {
-    width: 45vw;
+    width: 30vw;
     height: 2vh;
 }
 
