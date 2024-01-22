@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
                 $_SESSION['is_admin'] = $user['is_admin'];
                 $login = true;
 
-                header("location: secure.php");
+                header("location: calender.php");
                 exit();
             } else {
                 //wrong password
