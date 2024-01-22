@@ -1,36 +1,989 @@
-*{
-    border: #2d2424 solid 1px;
-    box-sizing: border-box;
+/algemeen/
+
+body {
+    margin: 0 auto;
+    line-height: normal;
 }
 
-/*desktop*/
-@media only screen and (min-width: 769px) {
+:root {
+    /* fonts */
+    --font-inter: Inter;
 
-    body{
+    /* font sizes */
+    --font-size-base: 16px;
+    --font-size-lg: 18px;
+    --font-size-5xl: 24px;
+    --font-size-lgi: 19px;
+    --font-size-4xs: 9px;
 
-        background-color: rgb(38, 38, 38);
+    /* Colors */
+    --color-white: #fff;
+    --color-darkslategray: #343a40;
+    --color-darkgray: #a5a8ab;
+    --color-black: #000;
+    --color-gray: #212529;
 
+    /* Gaps */
+    --gap-base: -36px;
+    --gap-13xl: 32px;
+    --gap-10xs: 3px;
+    --gap-4xl: 23px;
+
+    /* Paddings */
+    --padding-17xl: 36px;
+    --padding-xl: 20px;
+    --padding-9xs: 4px;
+    --padding-base: 16px;
+    --padding-11xs: 2px;
+    --padding-2xs: 11px;
+    --padding-10xs: 3px;
+
+    /* Border radiuses */
+    --br-11xl: 30px;
+}
+
+/details-page/
+.details-container {
+    max-width: 60vw;
+    margin: 0 auto;
+}
+
+.details-header {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: inherit;
+    display: flex;
+    justify-content: center;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.details-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background-color: #57a87a;
+    border-radius: 10px;
+    padding: 5vh 2.5vw;
+    gap: 1.5vh;
+}
+
+.details-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: #61b987;
+    border-radius: 10px;
+}
+
+.details-list h3{
+    margin: 0.5vh;
+}
+
+/* Register page */
+.register-container {
+    max-width: 60vw;
+    margin: 0 auto;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5vh;
+}
+
+.register-form a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: #fff;
+    background-color: #318355;
+}
+
+.register-form-all {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.5rem;
+    align-items: center
+}
+
+.register-form-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-form-button input[type=button], input[type=submit], input[type=reset] {
+    width: 45vw;
+    height: 2vh;
+    padding: 16px 32px;
+}
+
+.register-form input {
+    width: 30vw;
+    height: 2vh;
+}
+
+/*homepage*/
+.welkom-op-boerderij{
+    margin: 0 !important;
+    position: absolute;
+    bottom: -5px;
+    left: 24px;
+    font-size: inherit;
+    font-weight: 500;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 411px;
+    flex-shrink: 0;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+.screenshot-2023-12-11-135019-1 {
+    position: relative;
+    width: 216px;
+    height: 75px;
+    object-fit: cover;
+    z-index: 1;
+}
+.frame-child {
+    position: relative;
+    border-radius: var(--br-11xl);
+    width: 89px;
+    height: 31px;
+    display: none;
+}
+.home {
+    position: relative;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    text-decoration: none;
+    z-index: 1;
+    padding-left: 21px;
+}
+.frame-item,
+.vector-parent {
+    border-radius: var(--br-11xl);
+}
+.vector-parent {
+    background-color: #438a4b;
+    width: 89px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--padding-11xs) var(--padding-2xs) var(--padding-10xs);
+    box-sizing: border-box;
+}
+.frame-item {
+    position: relative;
+    width: 162px;
+    height: 31px;
+    display: none;
+}
+.hoe-ziet-een {
+    position: relative;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 138px;
+    height: 26px;
+    flex-shrink: 0;
+    text-decoration: none;
+    z-index: 1;
+}
+.frame-inner,
+.vector-group {
+    border-radius: var(--br-11xl);
+}
+.vector-group {
+    flex: 1;
+    background-color: #76a02d;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-11xs) var(--padding-11xs) var(--padding-10xs);
+    white-space: nowrap;
+}
+.frame-inner {
+    position: relative;
+    width: 89px;
+    height: 31px;
+    display: none;
+}
+.fotos,
+.vector-container {
+    display: flex;
+    align-items: center;
+}
+.fotos {
+    position: relative;
+    color: inherit;
+    justify-content: center;
+    height: 26px;
+    text-decoration: none;
+    z-index: 1;
+    padding-left: 20px;
+}
+.vector-container {
+    border-radius: var(--br-11xl);
+    background-color: #21a69d;
+    width: 89px;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: var(--padding-11xs) var(--padding-2xs) var(--padding-10xs);
+    box-sizing: border-box;
+}
+.rectangle-icon {
+    position: relative;
+    border-radius: var(--br-11xl);
+    width: 107px;
+    height: 31px;
+    display: none;
+}
+.afspraak-maken {
+    position: relative;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 87px;
+    height: 26px;
+    flex-shrink: 0;
+    text-decoration: none;
+    z-index: 1;
+}
+.frame-child1,
+.frame-div {
+    border-radius: var(--br-11xl);
+}
+.frame-div {
+    background-color: #8fad32;
+    width: 107px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-11xs) var(--padding-11xs) var(--padding-10xs);
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.frame-child1 {
+    position: relative;
+    width: 106px;
+    height: 31px;
+    display: none;
+}
+.contact-locatie,
+.vector-parent1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-locatie {
+    flex: 1;
+    position: relative;
+    color: inherit;
+    height: 26px;
+    text-decoration: none;
+    z-index: 1;
+}
+.vector-parent1 {
+    border-radius: var(--br-11xl);
+    background-color: #448639;
+    width: 106px;
+    flex-direction: row;
+    padding: var(--padding-11xs) 9px var(--padding-10xs) 10px;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.frame-child2 {
+    position: relative;
+    border-radius: var(--br-11xl);
+    width: 89px;
+    height: 31px;
+    display: none;
+}
+.frame-button,
+.login {
+    display: flex;
+    align-items: center;
+}
+.login {
+    position: relative;
+    font-size: var(--font-size-4xs);
+    font-family: var(--font-inter);
+    color: var(--color-white);
+    text-align: center;
+    justify-content: center;
+    height: 26px;
+    text-decoration: none;
+    z-index: 1;
+    padding-left: 21px;
+}
+.frame-button {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-11xs) var(--padding-2xs) var(--padding-10xs);
+    background-color: #318355;
+    border-radius: var(--br-11xl);
+    width: 89px;
+    flex-direction: row;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+.frame-button:hover {
+    background-color: #57a87a;
+}
+.frame-parent,
+.screenshot-2023-12-11-135019-1-parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+.frame-parent {
+    flex: 1;
+    align-items: flex-start;
+    padding: var(--padding-xl) var(--padding-9xs) var(--padding-xl) 0;
+    box-sizing: border-box;
+    gap: var(--gap-4xl);
+}
+.screenshot-2023-12-11-135019-1-parent {
+    width: 1024px;
+    align-items: center;
+    gap: 47px;
+    text-align: center;
+    font-size: var(--font-size-4xs);
+    color: var(--color-white);
+    font-family: var(--font-inter);
+}
+.image-1-icon,
+.wrapper-image-1 {
+    align-self: stretch;
+    flex-shrink: 0;
+}
+.image-1-icon {
+    max-width: 100%;
+    overflow: hidden;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    transform: scale(1.02);
+}
+
+.wrapper-image-1 {
+    position: relative;
+    height: 410px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.appointment-frame,
+.home-frame {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+.appointment-frame {
+    align-self: stretch;
+    flex: 1;
+    flex-direction: column;
+}
+.home-frame {
+    width: 1064px;
+    height: 536px;
+    flex-shrink: 0;
+    flex-direction: row;
+    position: relative;
+    text-align: center;
+    font-size: var(--font-size-5xl);
+    color: var(--color-gray);
+    font-family: var(--font-inter);
+}
+.blank-line {
+    margin: 0;
+}
+.blank-line1 {
+    margin: 0;
+    color: var(--color-gray);
+}
+.midden-in-het {
+    font-weight: 200;
+}
+.blank-line2,
+.midden-in-het-groene-hart-van {
+    margin: 0;
+}
+.midden-in-het-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 74px;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    max-width: 100%;
+}
+.text1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 var(--padding-base);
+    box-sizing: border-box;
+    min-height: 83px;
+    max-width: 100%;
+    text-align: left;
+}
+.wat-zeggen-anderen {
+    flex: 1;
+    position: relative;
+    font-weight: 500;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.text2 {
+    width: 328px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-base);
+    box-sizing: border-box;
+    max-width: 100%;
+    font-size: 20px;
+    color: var(--color-gray);
+}
+.text4 {
+    position: absolute;
+    margin: 0 !important;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #a0d8d1;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    height: 188px;
+}
+.wat-een-geweldige {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 364px;
+    max-width: 100%;
+    z-index: 1;
+}
+.blank-line3,
+.een-plek-met,
+.met-prachtige-mooie {
+    margin: 0;
+}
+.blank-line6 {
+    text-decoration: underline;
+}
+.blank-line5 {
+    color: inherit;
+}
+.blank-line4 {
+    margin: 0;
+}
+.blank-line9 {
+    text-decoration: underline;
+}
+.blank-line8 {
+    color: inherit;
+}
+.blank-line7 {
+    margin: 0;
+}
+.blank-line12 {
+    text-decoration: underline;
+}
+.blank-line11 {
+    color: inherit;
+}
+.blank-line10,
+.blank-line13 {
+    margin: 0;
+}
+.met-prachtige-mooie-container {
+    flex: 1;
+    position: relative;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    height: 216px;
+    max-width: 100%;
+    z-index: 1;
+    padding-bottom: -20px;
+    margin-top: -50px;
+}
+.text3,
+.text5 {
+    align-self: stretch;
+    box-sizing: border-box;
+}
+.text5 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 12px;
+    max-width: 100%;
+    text-align: left;
+    font-size: var(--font-size-base);
+}
+.text3 {
+    flex-direction: column;
+    padding: 5px 6px 0 var(--padding-9xs);
+    position: relative;
+    font-size: var(--font-size-5xl);
+}
+.info-frame,
+.text,
+.text3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+.text {
+    flex: 1;
+    flex-direction: column;
+    gap: 12px;
+}
+.info-frame {
+    width: 1118px;
+    flex-direction: row;
+    padding: 0 0 0 38px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: var(--font-size-base);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+}
+.rectangle-child {
+    align-self: stretch;
+    position: relative;
+    background-color: var(--color-darkslategray);
+    height: 483px;
+    display: none;
+}
+.contact {
+    position: relative;
+    display: flex;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    height: 53px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+.whatsapp-06-,
+.whatsapp-logo-1 {
+    position: relative;
+    height: 33px;
+    z-index: 2;
+}
+.whatsapp-logo-1 {
+    width: 33px;
+    object-fit: cover;
+    min-height: 33px;
+}
+.whatsapp-06- {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.whatsapp-logo-frame {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-10xs);
+}
+.div,
+.telefoon-logo-1 {
+    position: relative;
+    height: 33px;
+}
+.telefoon-logo-1 {
+    width: 33px;
+    object-fit: cover;
+    min-height: 33px;
+    z-index: 1;
+}
+.div {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.whatsapp-logo-frame1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.line {
+    gap: var(--gap-13xl);
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+}
+.line,
+.text7 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.locatie-logo-1 {
+    position: relative;
+    width: 33px;
+    height: 33px;
+    object-fit: cover;
+    min-height: 33px;
+    z-index: 1;
+}
+.oostveenseweg-7-2636 {
+    position: relative;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 33px;
+    z-index: 2;
+}
+.locatie-logo-frame,
+.text-group {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.locatie-logo-frame {
+    flex-direction: row;
+    row-gap: 20px;
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+}
+.text-group {
+    flex-direction: column;
+    gap: var(--gap-13xl);
+}
+.mail-logo-1 {
+    position: relative;
+    border-radius: 39px;
+    width: 33px;
+    height: 33px;
+    object-fit: cover;
+    min-height: 33px;
+    z-index: 1;
+}
+.infoboerderijweidelichtnl {
+    position: relative;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 33px;
+    white-space: nowrap;
+    z-index: 1;
+}
+.mail-logo-frame,
+.text6 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.mail-logo-frame {
+    flex-direction: row;
+    gap: var(--gap-10xs);
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+}
+.text6 {
+    flex: 1;
+    flex-direction: column;
+    gap: 36px;
+    min-width: 223px;
+    max-width: 100%;
+}
+.locatie {
+    position: relative;
+    display: flex;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    height: 53px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+.locatieboederij-1-icon {
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 177px;
+    object-fit: cover;
+    z-index: 2;
+}
+.locatie-parent,
+.locatieboederij-1-wrapper,
+.text-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+.locatieboederij-1-wrapper {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0;
+    box-sizing: border-box;
+}
+.locatie-parent,
+.text-parent {
+    flex: 1;
+}
+.locatie-parent {
+    flex-direction: column;
+    padding: 0 1px 0 0;
+    box-sizing: border-box;
+    min-width: 227px;
+}
+.text-parent {
+    flex-direction: row;
+    gap: 45px;
+    min-width: 480px;
+}
+.nieuws {
+    position: relative;
+    display: flex;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    height: 53px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+.blank-line14,
+.blank-line15,
+.de-keuken-het,
+.en-toen-was,
+.heel-blij-met {
+    margin: 0;
+}
+.de-keuken-het-container {
+    align-self: stretch;
+    position: relative;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--color-white);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    height: 157px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+.frame-group,
+.nieuws-frame,
+.rectangle-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.nieuws-frame {
+    width: 274px;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 274px;
+}
+.frame-group,
+.rectangle-inner {
+    flex-direction: row;
+    max-width: 100%;
+}
+.frame-group {
+    flex: 1;
+    gap: 38px;
+}
+.rectangle-inner {
+    width: 1086px;
+    padding: 0 0 0 var(--padding-17xl);
+    box-sizing: border-box;
+}
+.copyright-frame {
+    align-self: stretch;
+    position: relative;
+    border-top: 1px solid #535353;
+    box-sizing: border-box;
+    height: 1px;
+    z-index: 1;
+}
+.copyright-2019,
+.copyright-2019-all-rights-re-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    flex-shrink: 0;
+}
+.copyright-2019 {
+    position: relative;
+    font-weight: 500;
+    align-items: center;
+    width: 470px;
+    height: 41px;
+    z-index: 1;
+}
+.copyright-2019-all-rights-re-wrapper {
+    width: 896px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 var(--padding-xl);
+    box-sizing: border-box;
+}
+.line-element {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-13xl);
+    max-width: 100%;
+    text-align: center;
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+    font-family: var(--font-inter);
+}
+.rectangle {
+    background-color: var(--color-darkslategray);
+    width: 1440px;
+    flex-direction: column;
+    align-items: center;
+    padding: 19px 0 41px;
+    gap: 65px;
+    max-width: 103%;
+    flex-shrink: 0;
+}
+.rectangle,
+.rectangle-wrapper,
+.welcome-frame {
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+.rectangle-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    max-width: 100%;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: var(--font-size-lg);
+    color: var(--color-darkgray);
+    font-family: var(--font-inter);
+}
+.welcome-frame {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    overflow-y: auto;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: normal;
+}
+
+
+@media screen and (max-width: 975px) {
+    .hoe-ziet-een,
+    .vector-group {
+        display: none;
+    }
+    .text-parent {
+        gap: 22px;
+    }
+    .nieuws-frame {
+        flex: 1;
+    }
+    .frame-group {
+        flex-wrap: wrap;
+    }
+    .line-element {
+        gap: var(--gap-base);
+    }
+    .rectangle {
+        gap: var(--gap-13xl);
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .screenshot-2023-12-11-135019-1-parent {
+        gap: var(--gap-4xl);
+    }
+    .text-parent {
+        flex-wrap: wrap;
+        min-width: 100%;
+    }
+    .frame-group {
+        gap: 19px;
+    }
+    .rectangle {
+        padding-top: var(--padding-xl);
+        padding-bottom: 27px;
+        box-sizing: border-box;
+    }
+}
+@media screen and (max-width: 450px) {
+    .welkom-op-boerderij {
+        font-size: var(--font-size-lgi);
+    }
+    .wat-zeggen-anderen {
+        font-size: var(--font-size-base);
+    }
+    .wat-een-geweldige {
+        font-size: var(--font-size-lgi);
+    }
+    .locatie-logo-frame {
+        flex-wrap: wrap;
+    }
+    .text-group {
+        gap: var(--gap-base);
+    }
+    .text6 {
+        gap: 18px;
+    }
+    .rectangle {
+        gap: var(--gap-base);
     }
 
-
-
-    nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-    }
-
-    nav a{
-        display: flex;
-        text-decoration: none;
-
-    }
-
-    .logo img{
-        height: 60px;
-        width: 100%;
-    }
 
 }
