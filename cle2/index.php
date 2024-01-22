@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLE 2</title>
     <link rel="stylesheet" href="css/style.css">
     <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,300;0,400;0,500;1,800&display=swap"
-    <title>CLE 2</title>
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,300;0,400;0,500;1,800&display=swap">
+
 </head>
 
 <body>
