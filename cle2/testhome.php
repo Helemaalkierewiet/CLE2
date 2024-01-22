@@ -365,3 +365,9 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     </a>
 </p>
 <p class="blank-line13">&nbsp;</p>
+
+welcome frame
+padding: 0 var(--padding-17xl) 0 0;
+
+roots
+--padding-17xl: 36px;

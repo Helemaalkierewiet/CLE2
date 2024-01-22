@@ -65,8 +65,108 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,300;0,400;0,500;1,800&display=swap"
 </head>
 <body>
+
+<header class="screenshot-2023-12-11-135019-1-parent">
+    <img
+            class="screenshot-2023-12-11-135019-1"
+            loading="eager"
+            alt=""
+            src="images/logo_144.png"
+    />
+
+    <div class="frame-parent">
+        <div class="vector-parent">
+            <img
+                    class="frame-child"
+                    alt=""
+                    src="./public/rectangle-14.svg"
+            />
+
+            <a
+                    class="home"
+                    href="index.php"
+                    target="_blank"
+            >Home</a
+            >
+        </div>
+        <div class="vector-group">
+            <img
+                    class="frame-item"
+                    alt=""
+                    src="./public/rectangle-15.svg"
+            />
+
+            <a
+                    class="hoe-ziet-een"
+                    href="https://boerderijweidelicht.nl/een-dag-op/"
+                    target="_blank"
+            >Hoe ziet een dag eruit</a
+            >
+        </div>
+        <div class="vector-container">
+            <img
+                    class="frame-inner"
+                    alt=""
+                    src="./public/rectangle-16.svg"
+            />
+
+            <a
+                    class="fotos"
+                    href="https://www.figma.com/proto/OfRFP7CCgVH9oy64zSfQ4F/Untitled?type=design&node-id=21-43&t=5shvpIsrMsa1bECF-0&scaling=min-zoom&page-id=0%3A1"
+                    target="_blank"
+            >Foto´s</a
+            >
+        </div>
+        <div class="frame-div">
+            <img
+                    class="rectangle-icon"
+                    alt=""
+                    src="./public/rectangle-18.svg"
+            />
+
+            <a
+                    class="afspraak-maken"
+                    href="calender.php"
+                    target="_blank"
+            >Afspraak maken</a
+            >
+        </div>
+        <div class="vector-parent1">
+            <img
+                    class="frame-child1"
+                    alt=""
+                    src="./public/rectangle-17.svg"
+            />
+
+            <a
+                    class="contact-locatie"
+                    href="#divcontact"
+                    target="_blank"
+            >Contact & Locatie</a
+            >
+        </div>
+        <button class="frame-button">
+            <img
+                    class="frame-child2"
+                    alt=""
+                    src="./public/rectangle-19.svg"
+            />
+
+            <a
+                    class="login"
+                    href="login.php"
+                    target="_blank"
+            >Login</a
+            >
+        </button>
+    </div>
+</header>
+
 <div class="register-container">
         <section class="details-header">
     <div class="container">
@@ -126,5 +226,107 @@ if (isset($_POST['submit'])) {
 
     <?php endif; ?>
 </div>
+
+<section class="rectangle-wrapper">
+    <div class="rectangle">
+        <div class="rectangle-child"></div>
+        <div class="rectangle-inner">
+            <div class="frame-group">
+                <div class="text-parent" id="divcontact">
+                    <div class="text6">
+                        <div class="text-group">
+                            <div class="text7">
+                                <i class="contact">Contact</i>
+                                <div class="line">
+                                    <div class="whatsapp-logo-frame">
+                                        <img
+                                                class="whatsapp-logo-1"
+                                                loading="eager"
+                                                alt=""
+                                                src="images/whatsapp%20logo.png"
+                                        />
+
+                                        <div class="whatsapp-06-">
+                                            whatsapp: 06 - 27 51 09 11
+                                        </div>
+                                    </div>
+                                    <div class="whatsapp-logo-frame1">
+                                        <img
+                                                class="telefoon-logo-1"
+                                                loading="eager"
+                                                alt=""
+                                                src="images/telefoon%20logo.jpg"
+                                        />
+
+                                        <div class="div">015-3809999</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="locatie-logo-frame">
+                                <img
+                                        class="locatie-logo-1"
+                                        loading="eager"
+                                        alt=""
+                                        src="images/locatie%20logo.jpg"
+                                />
+
+                                <div class="oostveenseweg-7-2636">
+                                    Oostveenseweg 7, 2636 EC Schipluiden
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mail-logo-frame">
+                            <img
+                                    class="mail-logo-1"
+                                    loading="eager"
+                                    alt=""
+                                    src="images/mail%20logo.jpg"
+                            />
+
+                            <div class="infoboerderijweidelichtnl">
+                                info@boerderijweidelicht.nl
+                            </div>
+                        </div>
+                    </div>
+                    <div class="locatie-parent">
+                        <i class="locatie">Locatie</i>
+                        <div class="locatieboederij-1-wrapper">
+                            <img
+                                    class="locatieboederij-1-icon"
+                                    loading="eager"
+                                    alt=""
+                                    src="images/locatieboederij.png"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="nieuws-frame">
+                    <i class="nieuws">Nieuws</i>
+                    <div class="de-keuken-het-container">
+                  <span>
+                    <p class="de-keuken-het">
+                      De keuken: Het middelpunt van een huishouden, ook bij ons!
+                    </p>
+                    <p class="blank-line14">&nbsp;</p>
+                    <p class="en-toen-was">
+                      En toen was er ineens.... een kalfje!
+                    </p>
+                    <p class="blank-line15">&nbsp;</p>
+                    <p class="heel-blij-met">Heel blij met de duo-fiets!</p>
+                  </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="line-element">
+            <div class="copyright-frame"></div>
+            <div class="copyright-2019-all-rights-re-wrapper">
+                <div class="copyright-2019">
+                    Copyright 2019 | All Rights Reserved by Boerderij Weidelicht
+                </div>
+            </div>
+        </footer>
+    </div>
+</section>
 </body>
 </html>

@@ -132,7 +132,7 @@ body {
     height: 2vh;
 }
 
-
+/*homepage*/
 .welkom-op-boerderij{
     margin: 0 !important;
     position: absolute;
@@ -901,7 +901,6 @@ body {
     box-sizing: border-box;
 }
 .rectangle-wrapper {
-    align-self: stretch;
     flex-direction: row;
     align-items: flex-start;
     padding: 0;
@@ -919,7 +918,6 @@ body {
     overflow-y: auto;
     flex-direction: column;
     align-items: center;
-    padding: 0 var(--padding-17xl) 0 0;
     letter-spacing: normal;
 }
 
