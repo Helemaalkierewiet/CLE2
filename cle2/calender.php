@@ -183,7 +183,9 @@ while ($row = mysqli_fetch_assoc($result)) {
     });
 
     function showModal(selectedDate) {
-        $("#timeSlotModal").dialog({
+        var dialog = $("#timeSlotModal");
+
+        dialog.dialog({
             modal: true,
             buttons: {
                 "OK": function () {
@@ -193,7 +195,8 @@ while ($row = mysqli_fetch_assoc($result)) {
                         var eventData = {
                             title: title,
                             start: selectedDate.format(),
-                            end: selectedDate.clone().add(2, 'hours').format()
+                            end: selectedDate.clone().add(2, 'hours').format(),
+                            timeSlot: selectedTimeSlot
                         };
 
                         // Controleer of het tijdslot beschikbaar is
@@ -202,7 +205,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                                 if (isAvailable) {
                                     $('#calendar').fullCalendar('renderEvent', eventData, true);
                                     addAppointmentToDatabase(eventData);
-                                    $(this).dialog("close");
+                                    dialog.dialog("close"); // Gebruik hier de eerder vastgelegde 'dialog'
                                 } else {
                                     alert('Dit tijdslot is al geboekt. Kies een ander tijdslot.');
                                 }
@@ -213,11 +216,12 @@ while ($row = mysqli_fetch_assoc($result)) {
                     }
                 },
                 "Annuleren": function () {
-                    $(this).dialog("close");
+                    dialog.dialog("close");
                 }
             }
         });
     }
+
 
     function getTimeSlotTitle(selectedTimeSlot) {
         // Voeg hier de logica toe om de juiste tekst voor elk tijdslot te bepalen
