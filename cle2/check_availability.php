@@ -7,37 +7,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $startTime = $_POST['startTime'];
     $endTime = $_POST['endTime'];
 
-    // Extract de datum uit de starttijd
+    // Extract the date from the start time
     $date = date('Y-m-d', strtotime($startTime));
 
-    // Controleer of er al een reservering is voor het opgegeven tijdslot op de specifieke dag
-    $query = "SELECT id, title, start, end FROM calender_apps WHERE (start < '$endTime' AND end > '$startTime')";
+    // Define the time slots
+    $timeSlot1 = '1';
+    $timeSlot2 = '2';
+
+    // Check if the specified time slot is reserved
+    $query = "SELECT is_reserved_slot FROM calender_apps WHERE (start < '$endTime' AND end > '$startTime')";
 
     $result = mysqli_query($db, $query);
 
-    if (mysqli_num_rows($result) > 0) {
-        echo 'not available';
-    } else {
-        // Controleer ook of er al een reservering is voor het andere tijdslot op dezelfde dag
-        $otherTimeSlot = ($endTime == '2024-01-10T02:00:00+01:00') ? '1' : '2';
-        $otherStartTime = "$date 09:00:00";
-        $otherEndTime = "$date 11:00:00";
-
-        $queryOther = "SELECT id, title, start, end FROM calender_apps WHERE (start < '$endTime' AND end > '$startTime')";
-
-        $resultOther = mysqli_query($db, $queryOther);
-
-        if (mysqli_num_rows($resultOther) > 0) {
+    if ($row = mysqli_fetch_assoc($result)) {
+        $isReservedSlot = $row['is_reserved_slot'];
+        if ($isReservedSlot == '1') {
             echo 'not available';
-        } else {
-            echo 'available';
+            exit; // Stop further processing if the time slot is not available
         }
     }
 
-    // sos
-    error_log(print_r(mysqli_fetch_all($result, MYSQLI_ASSOC), true));
-}
+    // Check if the other time slot is reserved
+    $otherTimeSlot = ($endTime == '2024-01-10T02:00:00+01:00') ? $timeSlot1 : $timeSlot2;
+    $queryOther = "SELECT is_reserved_slot FROM calender_apps WHERE (start < '$endTime' AND end > '$startTime')";
 
-// soss
-error_log(print_r($_POST, true));
+    $resultOther = mysqli_query($db, $queryOther);
+
+    if ($rowOther = mysqli_fetch_assoc($resultOther)) {
+        $isReservedSlotOther = $rowOther['is_reserved_slot'];
+        if ($isReservedSlotOther == '1') {
+            echo 'not available';
+            exit; // Stop further processing if the other time slot is not available
+        }
+    }
+
+    echo 'available';
+
+    // For debugging purposes, you can log the database results and POST data
+    error_log("Result for specified time slot: " . print_r($row, true));
+    error_log("Result for other time slot: " . print_r($rowOther, true));
+    error_log("POST data: " . print_r($_POST, true));
+}
 ?>
