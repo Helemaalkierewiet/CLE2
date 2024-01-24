@@ -50,7 +50,7 @@
                                 class="hoe-ziet-een"
                                 href="https://boerderijweidelicht.nl/een-dag-op/"
                                 target="_blank"
-                        >Hoe ziet een dag eruit</a
+                        >Ho ziet een dag eruit</a
                         >
                     </div>
                     <div class="vector-container">
@@ -62,9 +62,9 @@
 
                         <a
                                 class="fotos"
-                                href="https://www.figma.com/proto/OfRFP7CCgVH9oy64zSfQ4F/Untitled?type=design&node-id=21-43&t=5shvpIsrMsa1bECF-0&scaling=min-zoom&page-id=0%3A1"
+                                href="https://boerderijweidelicht.nl/voor-wie/"
                                 target="_blank"
-                        >Foto´s</a
+                        >Voor wie?</a
                         >
                     </div>
                     <div class="frame-div">

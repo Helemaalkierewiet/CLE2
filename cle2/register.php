@@ -49,6 +49,10 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
     <link rel="stylesheet" href="css/style.css">
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,300;0,400;0,500;1,800&display=swap"
+
 </head>
 <body>
 
@@ -98,9 +102,9 @@ if (isset($_POST['submit'])) {
 
             <a
                     class="fotos"
-                    href="https://www.figma.com/proto/OfRFP7CCgVH9oy64zSfQ4F/Untitled?type=design&node-id=21-43&t=5shvpIsrMsa1bECF-0&scaling=min-zoom&page-id=0%3A1"
+                    href="https://boerderijweidelicht.nl/voor-wie/"
                     target="_blank"
-            >Foto´s</a
+            >Voor wie?</a
             >
         </div>
         <div class="frame-div">
